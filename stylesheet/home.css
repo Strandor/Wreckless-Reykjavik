@@ -1,0 +1,17 @@
+.welcome-sign {top: 25%; padding-left: 5%; position: absolute;}
+.we-are, .reykjavik {font-size: 3vw;}
+.welcome-sign .we-are {font-weight: 300;}
+.welcome-sign .wreckless {font-size: 3.5vw;}
+.welcome-sign .reykjavik {margin-top: 0px; font-style: italic; line-height: 0; text-align:left;}
+
+@media only screen and (max-width:1026px) {
+	 .welcome-sign {
+	    padding-left: 0px;
+	    text-align: center;
+
+	    left: 0;
+	    right: 0;
+	 }
+	 .we-are, .reykjavik {font-size: 7vmin; text-align: center !important;}
+	 .welcome-sign .wreckless {font-size: 7.5vmin;}
+}
