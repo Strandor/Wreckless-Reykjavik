@@ -1,0 +1,21 @@
+CREATE TABLE `accounts` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `email` varchar(50) NOT NULL,
+ `name` varchar(50) NOT NULL,
+ `password` varchar(60) NOT NULL,
+ `timedate` timestamp NOT NULL,
+ `hash` varchar(32) NOT NULL,
+ `activated` bit(1) NOT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COMMENT='Account info for wreckless\n\nRegister: /account/register.php\nLogin: /account/login.php'
+
+CREATE TABLE `products` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(32) NOT NULL,
+ `price` float NOT NULL,
+ `description` longtext,
+ PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1
+
+CREATE TABLE `wreckless`.`promocodes` ( `name` VARCHAR(10) NOT NULL , `prize_off` INT(10) NOT NULL , `expires` TIMESTAMP NULL , `max_uses` INT(10) NULL , `current_uses` INT(10) NOT NULL , `min_prize` INT(10) NULL , `max_prize` INT(10) NULL , PRIMARY KEY (`name`)) ENGINE = MyISAM;
